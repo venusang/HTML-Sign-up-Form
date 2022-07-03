@@ -81,8 +81,8 @@
                     <option value="WV">West Virginia</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <label for="zipcode">Your Zipcode</label>
-                <input type="text" id="zipcode" name="zipcode" />
+                <label for="zip">Your Zipcode</label>
+                <input type="text" id="zip" name="zip" />
             </fieldset>
 
 
@@ -106,12 +106,19 @@
                     <label for="new-zealand">New Zealand</label>
                 </div>
                 <div>
-                    <input type="color" id="color" name="color">
+                    <input type="color" id="color" name="color" value="#603454">
                     <label for="color">Favorite Color</label>
                 </div>
             </fieldset>
             <input type="submit" />
         </form>
+        <script type="text/javascript">
+            // Add color change eventlistener
+            let colorPicker = document.querySelector("#color");
+            colorPicker.addEventListener("change", (evt) => {
+                colorPicker.value = evt.target.value;
+            });
+        </script>
     </main>
     <footer>
         <h2>Resource Attributions</h2>
